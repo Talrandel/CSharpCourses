@@ -1,0 +1,74 @@
+﻿body {
+}
+
+.display-label {
+    font-family: 'Berlin Sans FB';
+    font-size: 22px;
+    font-stretch: expanded;    
+    padding-left: 50px;
+}
+
+.display-field {
+    font-family: 'Berlin Sans FB';
+    font-size: 22px;    
+    padding-left: 50px;
+}
+
+.editor-label {
+    font-family: 'Berlin Sans FB';
+    font-size: 22px;
+    font-stretch: expanded;
+    padding-left: 50px;
+}
+
+.editor-field {
+    font-family: 'Berlin Sans FB';
+    font-size: 22px;
+    font-stretch: expanded;
+    padding-left: 50px;
+}
+
+.moviebutton {
+    border-radius: 10px;    
+    padding: 7px 50px 7px 7px;
+}
+
+tr {
+    padding: 5px 5px 5px 5px;
+}
+
+td {
+    text-align: right;
+}
+
+.actionlink {
+    font-family: 'Berlin Sans FB';
+    font-size: 22px;
+    font-weight: 500;
+    color: brown;
+}
+
+.sides {
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.leftside {
+    background: #93ff67; 
+    height: 100%;
+    width: 50%;
+    float: left;
+    border-radius: 50px;
+}
+
+.leftside .a {
+    padding-right: 50px!important;
+}
+
+.rightside {
+    background: #93ff67; 
+    height: 100%;
+    width: 50%;
+    float: right;
+    border-radius: 50px;
+}
