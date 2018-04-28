@@ -7,8 +7,8 @@
     <ProjectGuid>{7BC4D06C-2801-4F6E-9D26-404348DDC7F7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lesson_1</RootNamespace>
-    <AssemblyName>Lesson_1</AssemblyName>
+    <RootNamespace>Theme_1</RootNamespace>
+    <AssemblyName>Theme_1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
