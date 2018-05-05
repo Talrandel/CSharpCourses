@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{91BDE8F2-5469-4D27-B7CB-65B1B8F731E6}</ProjectGuid>
+    <ProjectGuid>{E9A5C2BE-6E7F-4654-BED8-862B9D5EA4C1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Theme_2</RootNamespace>
-    <AssemblyName>Theme_2</AssemblyName>
+    <RootNamespace>Lesson_3_Tasks</RootNamespace>
+    <AssemblyName>Lesson_3_Tasks</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Theme_2.Subnamespace;
 
-namespace Theme_2
+namespace Lesson_3
 {
     class Program
     {
