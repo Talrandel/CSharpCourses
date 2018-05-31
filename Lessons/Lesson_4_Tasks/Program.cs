@@ -15,17 +15,26 @@ namespace Lesson_4_Tasks
         static void FourteenTask()
         {
             int[,] matrix;
-            
+
             Console.WriteLine("Введите размерность матрицы: ");
             int size = int.Parse(Console.ReadLine());
 
             matrix = new int[size, size];
-            
+
             FillMatrixWithRandomNumbers(matrix);
-            
+
             PrintMatrix(matrix);
-            
+
             Console.WriteLine("Определитель матрицы = " + GetDeterminant(matrix));
+        }
+
+        static void PrintArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
         }
 
         private static void FillMatrixWithRandomNumbers(int[,] matrix)

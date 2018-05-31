@@ -124,7 +124,7 @@ namespace Lesson_4
             }
 
             #endregion
-
+            
             Console.WriteLine("Нажми Enter для выхода.");
             Console.ReadLine();
         }
