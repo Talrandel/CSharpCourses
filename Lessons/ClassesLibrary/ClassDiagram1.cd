@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClassesLibrary.Figures.Circle" Collapsed="true">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAAAIAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Figures\Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Figures.FigureBase" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAIAAAAAABAAAAAQAAAAAgAAAAAAiABAAAAA=</HashCode>
+      <FileName>Figures\FigureBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Figures.FigureWithSides" Collapsed="true">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Figures\FigureWithSides.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Figures.Square" Collapsed="true">
+    <Position X="11.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAIAAAAQABAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Figures\Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Figures.Triangle" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAIAAAAQABAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Figures\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Driver" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQQAAAABAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Workers\Driver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Manager" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAABAACAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Workers\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Programmer" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAABAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Workers\Programmer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassesLibrary.Worker" Collapsed="true">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABEACAAQgAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Workers\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ClassesLibrary.Point" Collapsed="true">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Point.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="ClassesLibrary.Language" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAGAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Workers\Programmer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

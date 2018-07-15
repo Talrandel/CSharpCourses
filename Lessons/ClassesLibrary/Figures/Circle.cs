@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lesson_7
+namespace ClassesLibrary.Figures
 {
     /// <summary>
     /// Представляет окружность
     /// </summary>
-    class Circle : Figure
+    public class Circle : FigureBase
     {
         /// <summary>
         /// Значение радуиса окружности
@@ -18,7 +18,7 @@ namespace Lesson_7
         public int Radius
         {
             get { return _radius; }
-            private set
+            set
             {
                 if (value < 0)
                 {

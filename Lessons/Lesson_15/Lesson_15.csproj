@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7441AA4E-97B6-4671-A9C5-1196DB12C913}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{C827E701-AD89-4B04-B203-B1DB682C9F98}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassesLibrary</RootNamespace>
-    <AssemblyName>ClassesLibrary</AssemblyName>
+    <RootNamespace>Lesson_15</RootNamespace>
+    <AssemblyName>Lesson_15</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,20 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Figures\Circle.cs" />
-    <Compile Include="Figures\FigureBase.cs" />
-    <Compile Include="Figures\FigureWithSides.cs" />
-    <Compile Include="Figures\Square.cs" />
-    <Compile Include="Figures\Triangle.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="Workers\Driver.cs" />
-    <Compile Include="Workers\Manager.cs" />
-    <Compile Include="Workers\Programmer.cs" />
-    <Compile Include="Workers\Worker.cs" />
+    <Compile Include="CustomException.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassesLibrary\ClassesLibrary.csproj">
+      <Project>{7441aa4e-97b6-4671-a9c5-1196db12c913}</Project>
+      <Name>ClassesLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
