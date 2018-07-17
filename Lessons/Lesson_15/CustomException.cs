@@ -8,5 +8,6 @@ namespace Lesson_15
 {
     class CustomException : Exception
     {
+        // для отслеживания соответствия логики ТЗ
     }
 }

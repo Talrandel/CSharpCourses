@@ -2,66 +2,69 @@
 using ClassesLibrary;
 using ClassesLibrary.Figures;
 
+/// <summary>
+/// Exceptions
+/// </summary>
 namespace Lesson_15
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int a = 666;
+            int b = 0;
+            int c;
             try
             {
-                //int a = 157;
-                //int b = 0;
-                //int c = a / b;
-                //Console.WriteLine(c);
-                //Console.WriteLine("Успешное деление!");
 
-                //Circle c = new Circle();
-                //c.Name = null;
+                int[] arr = new int[4];
+                arr[0] = 16; arr[1] = 32; arr[2] = 14; arr[3] = 69;
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
 
-                //throw new Exception("Первый уровень");
-                try
-                {
-                    int a = 157;
-                    int b = 0;
-                    int c = a / b;
-                }
-                catch (DivideByZeroException ex2)
-                {
-                    Console.WriteLine("Exception!");
-                    Console.WriteLine(ex2.Message);
-                    throw new Exception("Inner exception!", ex2);
-                }
+                //Square square_lol = new Square();
+                //square_lol.Name = "";
+                
+                throw new CustomException();
+
+                c = a / b;
+                Console.WriteLine("Всё работает!");
             }
-            //catch (NullReferenceException nre)
-            //{
-            //    Console.WriteLine("NullReferenceException!");
-            //    Console.WriteLine(nre.Message);
-            //}
-            //catch (DivideByZeroException div)
-            //{
-            //    Console.WriteLine("DivideByZeroException!");
-            //    Console.WriteLine(div.Message);
-            //}
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Мы словили исключение!!!");
+                c = 69;
+            }
+            catch (IndexOutOfRangeException ire)
+            {
+                Console.WriteLine(ire.Message);
+                Console.WriteLine("Опять исключение!!!");
+                c = 72;
+            }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception!");
                 Console.WriteLine(ex.Message);
+                Console.WriteLine("Мы словили исключение!!!");
+                c = 753;
                 //try
                 //{
-                //    throw new Exception("Второй уровень");
+                //    throw new CustomException();
                 //}
-                //catch (Exception ex2)
+                //catch
                 //{
-                //    Console.WriteLine("Exception!");
-                //    Console.WriteLine(ex2.Message);
+                //    Console.WriteLine(ex.Message);
+                //    Console.WriteLine("ДА СКОКА МОЖНО КРАШИТЬСЯ!!!!");
                 //}
             }
             finally
             {
-                Console.WriteLine("Finally");
+                Console.WriteLine("Finally!");
             }
-            Console.Read();
+            Console.WriteLine("c = " + c);
+            Console.ReadLine();
         }
     }
 }
