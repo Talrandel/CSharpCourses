@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,38 +8,27 @@ namespace Lesson_18
 {
     class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
-            // normal array
-           // int[] arr_1 = new int[5];
-           // int[] arr_2 = new int[] {1,2,3,4,5};
-           // int[] giant_Array = GetGiantArray();
-           // int el_1 = giant_Array[0];
-           // int el_2 = giant_Array[126547];
-           // int el_3 = giant_Array[9999996];
-
-            //Linked list
-            //LinkedList<int> linkedList = GetGiantLinkedList();
-            //var found = linkedList.Find(9999999);
-            //linkedList.AddLast(new LinkedListNode<int>(100000001));
-
+           
             //ArrayList
             ArrayList arrayList = new ArrayList();
             arrayList.Add(12);
             arrayList.Add(13);
             arrayList.Add("string");
+            arrayList.Add(new StringBuilder()); 
             var arrayListElement = arrayList[0];
             //int sum = 0;
             //foreach (var el in arrayList)
             //{
-                //sum += (int) el;
+            //    sum += (int)el;
             //}
-
+            
             //Generic List
             List<int> list = new List<int>();
             list.Add(1);
             list.Add(2);
-            list.AddRange(new int[]{3,4,5,6,7,8,9});
+            list.AddRange(new int[] { 3, 4, 5, 6, 7, 8, 9 });
             Console.WriteLine("Лист из элементов");
             PrintList(list);
             var listElement = list[0];
@@ -52,12 +40,14 @@ namespace Lesson_18
             list.RemoveAt(0);
             Console.WriteLine("Убрали элемент по нулевому индексу");
             PrintList(list);
-            list.RemoveAll(c=>c>5);
+            list.RemoveAll(c => c > 5);
             Console.WriteLine("Убрали все элементы больше 5");
             PrintList(list);
 
+
             //Generics generates classes per each instance
-            Foo<int>.Bar++;
+            Foo<long>.Bar++;
+            Foo<long>.Bar = 12;
             Console.WriteLine("А теперь выведем на экран наше статическое поле");
             Console.WriteLine(Foo<double>.Bar);
 
@@ -65,11 +55,11 @@ namespace Lesson_18
             Console.WriteLine("Дженерики в методах");
             CheckIfString("this is string");
             CheckIfString<int>(12);
-            
-           //Constraints
+
+            //Constraints
             IGenericInterface<ValidGeneric> validGeneric = null;
             //IGenericInterface<NonValidGeneric> nonValidGeneric = null; // не скомпилится
-           // IGenericInterface<AnotherNonValidGeneric> anotherNonValidGeneric = null; // тоже не скомпилится
+            // IGenericInterface<AnotherNonValidGeneric> anotherNonValidGeneric = null; // тоже не скомпилится
 
             CheckIfStringConstraint(new ValidGeneric());
             //CheckIfStringConstraint(new NonValidGeneric()); // не скомпилится
@@ -78,7 +68,7 @@ namespace Lesson_18
             // Ковариантность
             //IBank<DepositAccount> depositBank = new Bank();
             //depositBank.DoOperation();
-    
+
             //IBank<Account> ordinaryBank = depositBank;
             //ordinaryBank.DoOperation();
 
@@ -94,25 +84,9 @@ namespace Lesson_18
             Console.WriteLine();
             Console.ReadKey();
         }
-        // Вспомогательны метод генерящий огромный массив
-        static int[] GetGiantArray()
-        {
-            return Enumerable.Range(0, 10000000).ToArray();
-        }
-        // Вспомогательный метод генерящий огромный связный список
-        static LinkedList<int> GetGiantLinkedList()
-        {
-            var _result = new LinkedList<int>();
-            for (int i = 0; i < 100000000; i++)
-            {
-                _result.AddLast(new LinkedListNode<int>(i));
-            }
-
-            return _result;
-
-        }
+     
         //Вспомогательный метод для печати листов
-        static void PrintList<T>(List<T> list) 
+        static void PrintList<T>(List<T> list)
         {
             var sb = new StringBuilder();
             foreach (var elem in list)
@@ -124,11 +98,12 @@ namespace Lesson_18
         // Класс для теста подтверждающего что дженерики создают отдельный класс на каждый тип
         class Foo<T>
         {
-            public static int Bar;
+            public static T Bar;
         }
         //Простой дженерик метод проверяющий что переданный объект строка
         static void CheckIfString<T>(T parameter)
         {
+            var test = default(T);
             Console.WriteLine(typeof(T) == typeof(string));
         }
         //Дженерик интерфейс с констрейнтами
@@ -144,11 +119,34 @@ namespace Lesson_18
         //Класс-болванка подходящая под констрейнт
         class ValidGeneric : IEnumerable<ValidGeneric>, IList<ValidGeneric>
         {
-            public ValidGeneric this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public ValidGeneric this[int index]
+            {
+                get
+                {
+                    throw new NotImplementedException();
+                }
 
-            public int Count => throw new NotImplementedException();
+                set
+                {
+                    throw new NotImplementedException();
+                }
+            }
 
-            public bool IsReadOnly => throw new NotImplementedException();
+            public int Count
+            {
+                get
+                {
+                    throw new NotImplementedException();
+                }
+            }
+
+            public bool IsReadOnly
+            {
+                get
+                {
+                    throw new NotImplementedException();
+                }
+            }
 
             public void Add(ValidGeneric item)
             {
@@ -203,7 +201,7 @@ namespace Lesson_18
         //Структура-болванка не подходящая под констрейнт
         struct NonValidGeneric
         {
-            
+
         }
         //Класс-болванка не подходящая под констрейнт
         class AnotherNonValidGeneric
